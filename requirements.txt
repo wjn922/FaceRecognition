@@ -1,0 +1,4 @@
+opencv-contrib-python
+mysql-connector-python
+pyttsx3
+Pillow

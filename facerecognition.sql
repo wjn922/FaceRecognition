@@ -25,11 +25,20 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `absen`
 --
+DROP TABLE IF EXISTS `absen`;
+
 
 CREATE TABLE `absen` (
   `nama` varchar(50) NOT NULL,
-  `waktu_absen` time NOT NULL
+  `waktu_absen` time NOT NULL,
+  `tanggal` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+LOCK TABLES `absen` WRITE;
+/*!40000 ALTER TABLE `absen` DISABLE KEYS */;
+INSERT INTO `absen` VALUES ("RYAN", NOW(), '2021-01-06');
+/*!40000 ALTER TABLE `absen` ENABLE KEYS */;
+UNLOCK TABLES;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -7,7 +7,7 @@ import pickle
 from datetime import datetime
 
 # create database connection
-myconn = mysql.connector.connect(host="localhost", user="pmauser", passwd="root", database="facerecognition")
+myconn = mysql.connector.connect(host="localhost", user="root", passwd="xxxxx", database="facerecognition")
 date = datetime.utcnow()
 now = datetime.now()
 current_time = now.strftime("%H:%M:%S")
