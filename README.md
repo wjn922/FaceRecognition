@@ -44,6 +44,14 @@ mysql> use facerecognition;
 # import from sql file
 source facerecognition.sql
 ```
+## Collect Face Data
+```
+"""
+user_name = "Jack" # the name
+NUM_IMGS = 10  # the number of saved images
+"""
+python face_capture.py
+```
 
 ## run train.py
 ```
