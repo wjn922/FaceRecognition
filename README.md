@@ -89,11 +89,17 @@ mysql> USE facerecognition;
 mysql> source facerecognition.sql
 ```
 
-
-
-## run faces.py
+### 3. Login Interface
+#### 3.1 OpenCV GUI
 ```
 python faces.py
 ```
 
-The webcam will be active.
+#### 3.2 PySimpleGUI GUI
+```
+python faces_gui.py
+```
+
+The camera will be activated and recognize your face using the pretrained model.    
+You need to implement other useful functions in this part.
+
