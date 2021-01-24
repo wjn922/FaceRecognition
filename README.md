@@ -41,7 +41,7 @@ myconn = mysql.connector.connect(host="localhost", user="root", passwd="xxxxx", 
 ```
 """
 user_name = "Jack"   # the name
-NUM_IMGS = 400        # the number of saved images
+NUM_IMGS = 400       # the number of saved images
 """
 python face_capture.py
 ```
@@ -55,10 +55,28 @@ python train.py
 `train.yml` and `labels.pickle` will be created at the current folder.
 
 
-### Import `facerecognition.sql`
+### 2. Database Design
+#### 2.1 Define Database
+You need to CREATE TABLE in the file `facerecognition.sql`.      
+Here is a sample code for `Student`.
+```
+# Create TABLE 'Student'
+CREATE TABLE `Student` (
+  `student_id` int NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `login_time` time NOT NULL,
+  `login_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-The `facerecognition.sql` only has one example, "RYAN" now. It can be directly used without any modification by:
+LOCK TABLES `Student` WRITE;
+/*!40000 ALTER TABLE `Student` DISABLE KEYS */;
+INSERT INTO `Student` VALUES (1, "JACK", NOW(), '2021-01-20');
+/*!40000 ALTER TABLE `Student` ENABLE KEYS */;
+UNLOCK TABLES;
+```
 
+#### 2.2 Import Database
+Open mysql server and import the file `facerecognition.sql`.
 ```
 # login the mysql command
 mysql -u root -p
@@ -68,21 +86,10 @@ mysql> CREATE DATABASE facerecognition;
 mysql> USE facerecognition;
 
 # import from sql file
-source facerecognition.sql
-```
-## Collect Face Data
-```
-"""
-user_name = "Jack"   # the name
-NUM_IMGS = 400        # the number of saved images
-"""
-python face_capture.py
+mysql> source facerecognition.sql
 ```
 
-## run train.py
-```
-python train.py
-```
+
 
 ## run faces.py
 ```
