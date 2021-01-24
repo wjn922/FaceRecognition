@@ -23,22 +23,29 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `absen`
+-- Table structure for table `Student`
 --
-DROP TABLE IF EXISTS `absen`;
+DROP TABLE IF EXISTS `Student`;
 
-
-CREATE TABLE `absen` (
-  `nama` varchar(50) NOT NULL,
-  `waktu_absen` time NOT NULL,
-  `tanggal` date NOT NULL
+# Create TABLE 'Student'
+CREATE TABLE `Student` (
+  `student_id` int NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `login_time` time NOT NULL,
+  `login_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-LOCK TABLES `absen` WRITE;
-/*!40000 ALTER TABLE `absen` DISABLE KEYS */;
-INSERT INTO `absen` VALUES ("RYAN", NOW(), '2021-01-06');
-/*!40000 ALTER TABLE `absen` ENABLE KEYS */;
+LOCK TABLES `Student` WRITE;
+/*!40000 ALTER TABLE `Student` DISABLE KEYS */;
+INSERT INTO `Student` VALUES (1, "JACK", NOW(), '2021-01-20');
+/*!40000 ALTER TABLE `Student` ENABLE KEYS */;
 UNLOCK TABLES;
+
+
+# Create TABLE 'Course'
+# Create TABLE 'Classroom'
+# Create other TABLE...
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
