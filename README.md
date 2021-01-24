@@ -1,6 +1,6 @@
 # Face Recognition
 
-face recognition using python and mysql
+Face recognition using python and mysql.
 
 *******
 
@@ -8,11 +8,10 @@ face recognition using python and mysql
 
 ### Environment
 
+Create virtual environment using Anaconda.
 ```
 conda create -n face python=3.x
-
 conda activate face
-
 pip install -r requirements.txt
 ```
 
@@ -45,7 +44,7 @@ NUM_IMGS = 400       # the number of saved images
 """
 python face_capture.py
 ```
-The camera will be activated and the captured images will be stored in `data/Jack` folder.
+The camera will be activated and the captured images will be stored in `data/Jack` folder.      
 **Note:** Only one person’s images can be captured at a time.
 
 #### 1.2 Train a Face Recognition Model
@@ -57,7 +56,7 @@ python train.py
 
 ### 2. Database Design
 #### 2.1 Define Database
-You need to CREATE TABLE in the file `facerecognition.sql`.      
+You need to CREATE TABLE in `facerecognition.sql`.      
 Here is a sample code for `Student`.
 ```
 # Create TABLE 'Student'
