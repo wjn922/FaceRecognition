@@ -56,7 +56,7 @@ python train.py
 
 ### 2. Database Design
 #### 2.1 Define Database
-You need to CREATE TABLE in `facerecognition.sql`.      
+**You need to** create tables in `facerecognition.sql`.      
 Here is a sample code for `Student`.
 ```
 # Create TABLE 'Student'
@@ -100,5 +100,5 @@ python faces_gui.py
 ```
 
 The camera will be activated and recognize your face using the pretrained model.    
-You need to implement other useful functions in this part.
+**You need to** implement other useful functions in this part.
 
