@@ -54,7 +54,9 @@ python train.py
 `train.yml` and `labels.pickle` will be created at the current folder.
 
 
+
 ### 2. Database Design
+
 #### 2.1 Define Database
 **You need to** create tables in `facerecognition.sql`.      
 Here is a sample code for `Student`.
@@ -88,7 +90,10 @@ mysql> USE facerecognition;
 mysql> source facerecognition.sql
 ```
 
+
+
 ### 3. Login Interface
+
 #### 3.1 OpenCV GUI
 ```
 python faces.py
